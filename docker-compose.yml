@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  database:
+    restart: always
+    image: postgres:12.6
+    environment:
+        - POSTGRES_DB=${DB_NAME}
+        - POSTGRES_USER=${DB_USER}
+        - POSTGRES_PASSWORD=${DB_PASSWORD}
+    ports:
+        - "${DB_PORT}:5432"
+    volumes:
+        - bycoders_db:/var/lib/postgresql/data
+    networks:
+        - database_network
+  application:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    volumes:
+      - .:/code
+      - bycoders_home:/root
+    ports:
+      - "8000:8000"
+    networks:
+      - database_network
+    depends_on:
+      - database
+
+
+volumes:
+  bycoders_db:
+  bycoders_home:
+
+networks:
+  database_network:
