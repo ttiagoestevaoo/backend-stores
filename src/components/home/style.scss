@@ -1,0 +1,17 @@
+@import "./../../assets/style/colors.scss";
+
+.navbar {
+    @apply flex justify-between items-center;
+}
+
+.navbar-item {
+    @apply mr-4  font-medium;
+}
+
+.navbar-button {
+    border-radius: 20px;
+    border: 1px solid $highGreen;
+    color: $highGreen;
+    @apply px-3 py-2  mx-4  font-medium;
+}
+

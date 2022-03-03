@@ -1,0 +1,25 @@
+@import "./../../assets/style/colors.scss";
+
+.footer {
+	background-color: $lightBrown;
+}
+
+.title {
+	@apply mb-3;
+	font-size: 1.2em;
+	color: $lightGreen;
+	font-weight: bold;
+}
+
+.group {
+	@apply w-full flex justify-start mb-2;
+
+	div {
+		color:$lightGreen;
+	}
+
+	p {
+		@apply ml-4;
+		display: inline;
+	}
+}

@@ -1,0 +1,16 @@
+@import "./../../assets/style/colors.scss";
+
+.comodities {
+  position: relative;
+
+  .comodities-icons {
+    @apply flex justify-center w-full;
+    position: absolute;
+    top: -4em;
+  }
+  .comodity {
+    font-size: 14px;
+    background-color: #fff;
+    @apply px-4 py-6 w-44 font-bold flex justify-center box-shadow;
+  }
+}
