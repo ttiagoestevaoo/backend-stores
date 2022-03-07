@@ -1,16 +1,30 @@
-@import "./../../assets/style/colors.scss";
+@import "@/assets/style/colors.scss";
+@import "@/assets/style/boxShadow.scss";
 
 .comodities {
   position: relative;
 
   .comodities-icons {
-    @apply flex justify-center w-full;
-    position: absolute;
-    top: -4em;
+      @apply flex justify-center w-full;
+      position: absolute;
+      top: -4em;
+
+      .comodity {
+          font-size: 14px;
+          background-color: #fff;
+          @apply mr-auto px-4 py-6 w-44 font-bold flex flex-col justify-center items-center box-shadow;
+      }
   }
-  .comodity {
-    font-size: 14px;
-    background-color: #fff;
-    @apply px-4 py-6 w-44 font-bold flex justify-center box-shadow;
-  }
+}
+
+.comodity-img {
+  @apply items-center text-center;
+  max-height:60px;
+  max-width: 60px;
+}
+
+.comodity-text{
+  @apply mt-5 items-start text-center;
+  height:40px;
+  width: 140px;
 }

@@ -1,0 +1,40 @@
+@import "@/assets/style/colors.scss";
+@import "@/assets/style/boxShadow.scss";
+
+.events {
+    background-color: $extraLightGreen;
+}
+
+.events-galery-card {
+    @apply p-10 w-1/4 mr-5 box-shadow;
+    background-color: #fff;
+    text-align: center;
+}
+
+.events-galery {
+    @apply flex justify-around;
+}
+
+.events-galery-card-img {
+    img {
+        border-radius: 20px;
+        @apply object-cover mx-auto;
+    }
+}
+
+.events-galery-card-title {
+  color: $highGreen;
+  font-size: 20px;
+  @apply font-bold my-5;
+}
+
+.events-galery-card-text {
+  @apply my-5;
+}
+
+.events-galery-card-btn {
+  border-radius: 34px;
+  background-color: $ligthGray;
+  color: $hightGray;
+  @apply my-5 py-4 px-10;
+}

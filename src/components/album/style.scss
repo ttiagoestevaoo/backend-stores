@@ -1,0 +1,63 @@
+@import "@/assets/style/colors.scss";
+@import "@/assets/style/boxShadow.scss";
+
+.album {
+    position: relative;
+    height: auto;
+    @apply flex justify-between mt-10;
+
+    &-selector {
+        @apply items-center text-center flex flex-col justify-between box-shadow;
+
+        height: 100%;
+
+        &-item {
+            @apply py-2 my-5 px-20 w-full;
+
+            &-selected {
+                border-left: 2px solid $lightGreen;
+                @apply font-bold;
+                color: $lightGreen;
+            }
+        }
+    }
+
+    &-photos {
+        position: relative;
+        @apply p-10 items-center flex flex-col box-shadow;
+
+        &-photo {
+            img {
+                border-radius: 20px;
+                @apply object-cover;
+                max-height: 400px;
+                min-width: 800px;
+            }
+        }
+    }
+
+    &-text {
+        color: $extraHighGreen;
+        @apply flex flex-col mt-10;
+
+        &-title {
+            @apply font-bold text-lg mb-2;
+        }
+    }
+
+    &-icons {
+        position: absolute;
+        bottom: -20px;
+
+        @apply flex flex-row;
+
+        &-icon {
+            background-color: $lightGreen;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            @apply p-5 flex items-center mx-2 justify-center;
+        }
+    }
+}
+

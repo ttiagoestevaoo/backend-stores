@@ -1,11 +1,32 @@
-@import "./../../assets/style/colors.scss";
+@import "@/assets/style/colors.scss";
+@import "@/assets/style/boxShadow.scss";
 
 .navbar {
     @apply flex justify-between items-center;
+
+    .navbar-social {
+        @apply flex justify-between items-center ml-4;
+    }
 }
 
 .navbar-item {
     @apply mr-4  font-medium;
+}
+
+.navbar-icon {
+    border-radius: 100px;
+    border: 1px solid $highGreen;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding: 8px;
+}
+
+.navbar-logo {
+    height: 100%;
+}
+.navbar-logo-img {
+    height: 80px;
 }
 
 .navbar-button {
@@ -15,3 +36,94 @@
     @apply px-3 py-2  mx-4  font-medium;
 }
 
+.galery {
+    position: relative;
+    min-height: 500px;
+    min-width: 700px;
+
+    .img-content {
+        @apply w-full;
+        position: relative;
+        padding-top: 30px;
+
+        .img {
+            border-radius: 50px 50px 0 50px;
+            @apply object-cover;
+            min-height: 500px;
+            max-height: 500px;
+            min-width: 700px;
+            max-width: 700px;
+        }
+
+        .button-group {
+            position: absolute;
+            bottom: 0%;
+            right: 0;
+            margin-bottom: 0;
+
+            @apply flex justify-start mr-3;
+
+            .button {
+                width: 12px;
+                height: 12px;
+                background-color: #fff;
+                @apply box-shadow mr-4;
+
+                &-selected {
+                    background-color: $lightGreen;
+                }
+            }
+        }
+    }
+
+    .img-content::after {
+        content: "";
+        width: 95%;
+        height: 90%;
+        top: 0;
+        left: 5%;
+        background-color: $lightGreen;
+        position: absolute;
+        opacity: 0.3;
+        z-index: -1;
+        border-radius: 50px 50px 0 50px;
+    }
+}
+
+
+.header {
+    background-color: $lightBrown;
+    position: relative;
+}
+
+.content {
+    top: 15%;
+    left: 0;
+    position: absolute;
+    z-index: 0;
+    @apply mt-20 w-full flex justify-between;
+}
+
+.content {
+    .text,
+    .galery {
+        @apply w-1/2 mr-5 my-auto;
+    }
+}
+
+.content {
+    * {
+        @apply mb-5;
+    }
+
+    .title {
+        color: $lightGreen;
+        @apply text-lg font-bold;
+        font-size: 70px;
+        line-height: 90px;
+    }
+
+    .subtitle {
+        color: $extraHighGreen;
+    }
+}

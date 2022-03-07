@@ -1,0 +1,46 @@
+@import "colors.scss";
+
+.body {
+    font-family: "Roboto";
+    color: $extraHighGreen;
+    height: 100%;
+}
+
+.container {
+    @apply w-full;
+}
+
+.box {
+    position: relative;
+    @apply w-4/5 mx-auto;
+
+    &-screen {
+        @extend .box;
+        @apply h-screen;
+    }
+}
+
+
+.btn {
+    @apply py-2 px-6 mx-auto text-sm font-bold;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.btn-green {
+    @extend .btn;
+    background-color: $lightGreen;
+    color: #fff;
+}
+
+
+.box-title {
+    color: $highGreen;
+    font-size: 40px;
+    @apply font-bold w-full text-center;
+
+    p {
+        padding-top: 2em;
+        padding-bottom: 1em;
+    }
+}

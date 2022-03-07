@@ -1,0 +1,29 @@
+@import "./../../assets/style/colors.scss";
+
+.partners {
+    @apply flex;
+}
+
+.partners-card {
+    @apply box-shadow flex w-3/4 my-6 p-10 items-center;
+}
+
+.partners-card:nth-child(odd) {
+    @apply mr-auto;
+}
+.partners-card:nth-child(even) {
+    @apply ml-auto;
+}
+
+.partners-title {
+    @apply font-bold;
+    color: $lightGreen;
+    font-size: 70px;
+    line-height: 80px;
+}
+
+.partners-card-title {
+    @apply font-bold mb-2;
+    color: $hightOrange;
+    font-size: 20px;
+}

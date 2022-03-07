@@ -169,3 +169,7 @@ export default class AlbumComponent extends Vue {
   }
 }
 </script>
+
+<style lang="scss">
+@import "style.scss";
+</style>

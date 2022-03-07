@@ -19,23 +19,24 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      comodity_icons: [
-          { title: "Piscina", icon: "nadador" },
-          { title: "Churrasqueira", icon: "churrasco" },
-          { title: "Forno e fogão a lenha", icon: "forno" },
-          { title: "Salão de festas", icon: "champanhe" },
-          { title: "Salão de jogos", icon: "snooker" },
-          {
-              title: "Quadra poliesportiva coberta",
-              icon: "bola_de_futebol",
-          },
-      ],
-    }
-  },
+<script lang="ts">
+import { Vue } from "vue-class-component";
+
+export default class ComoditiesComponent extends Vue {
+  comodity_icons = [
+      { title: "Piscina", icon: "nadador" },
+      { title: "Churrasqueira", icon: "churrasco" },
+      { title: "Forno e fogão a lenha", icon: "forno" },
+      { title: "Salão de festas", icon: "champanhe" },
+      { title: "Salão de jogos", icon: "snooker" },
+      {
+          title: "Quadra poliesportiva coberta",
+          icon: "bola_de_futebol",
+      },
+  ]
 }
 </script>
 
+<style lang="scss">
+@import "style.scss";
+</style>
